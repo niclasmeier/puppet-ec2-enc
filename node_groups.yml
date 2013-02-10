@@ -1,0 +1,15 @@
+backend-production:
+  classes:
+    backend:
+    collectd:
+      varnish: true
+  environment: production
+  parameters:
+    loadbalancer_name: backend-production
+backend-development:
+  classes:
+    backend:
+      admin: true
+  environment: development
+  parameters:
+    loadbalancer_name: backend-development    
